@@ -1,4 +1,6 @@
 # ccomp2-2.2-2023
 # Jeffry
-# ciencia de la computacion I
-# aprovare este curso con 20
+# Ciencia de la computacion I
+## Aprovare este curso con 20
+
+### Editando desde github
