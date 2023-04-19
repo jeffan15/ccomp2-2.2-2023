@@ -10,7 +10,7 @@ int main(){
     int aux;
     int sum = 0;
     for(int i = 0; i < t; i++){
-        sum = sum + (var.at(i) - '0');
+            sum += var.at(i) - '0';
     }
     cout << sum << endl;
     return 0;
