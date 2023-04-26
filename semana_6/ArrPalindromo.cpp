@@ -1,29 +1,32 @@
 #include <iostream>
-#include <array>
 using namespace std;
 
-bool esPalindromo(int arr[], int tam){
-    bool status;
-    for(int i=1; arr[i] < tam/2; i++){
-        for(int j=tam; arr[j] >= tam/2; j--){
-            if (arr[i] != arr[j]){
-                status = 1;
-            }
+bool esPalindromo(int arreglo[], int tam) {
+    for (int i = 0; i < tam / 2; i++) {
+        if (arreglo[i] != arreglo[tam - i - 1]) {
+            return false;
         }
     }
-    if(status==1)
-        return true;
-    else
-        return false;
+    return true;
 }
 
-int main(){
-    int tam = 5;
-    int arr1[]={1,2,3,4,5};
-    if(esPalindromo(arr1, tam)==true){
-        cout << "su array es palindromo" << endl;
+bool esPalindromoRecursivo(int arr[], int inicio, int fin) {
+    if (inicio >= fin) {
+        return true;
     }
-    else
-        cout << "su array no es palindromo" << endl;
+    if (arr[inicio] != arr[fin]) {
+        return false;
+    }
+    return esPalindromoRecursivo(arr, inicio + 1, fin - 1);
+}
 
+
+int main() {
+    int arr1[] = {1, 2, 3, 2, 1};
+    int tam = 5;
+    cout << esPalindromo(arr1, tam) << endl;
+    int arr2[] = {1, 2, 3, 4, 5};
+    cout << esPalindromo(arr2, tam) << endl;
+
+    return 0;
 }
