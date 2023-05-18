@@ -1,6 +1,11 @@
 #include <iostream>
 using namespace std;
 
+void invertir(int &a, int &b){
+    int temp = a;
+    a=b;
+    b=temp;
+}
 void invertirArreglo(int arreglo[], int tamano) {
     for (int i = 0; i < tamano / 2; i++) {
         int temp = arreglo[i];
