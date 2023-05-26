@@ -26,4 +26,13 @@ int main(){
     << "DERIVED-CLASS OBJECT\nINVOKES BASE-CLASS TOSTRING "
     << "FUNCTION ON THAT DERIVED-CLASS OBJECT:\n"
     << commissionEmployeePtr->toString() << endl;
+    /*BasePlusCommissionEmployee basePlusCommissionEmployee{ "Bob", "Lewis", "333-33-3333", 5000, .04, 300};
+    CommissionEmployee* commissionEmployeePtr{&basePlusCommissionEmployee};
+    string firstName{commissionEmployeePtr->getFirstName()};
+    string lastName{commissionEmployeePtr->getLastName()};
+    string ssn{commissionEmployeePtr->getSocialSecurityNumber()};
+    double grossSales{commissionEmployeePtr->getGrossSales()};
+    double commissionRate{commissionEmployeePtr->getCommissionRate()};
+    double baseSalary{commissionEmployeePtr->getBaseSalary()};
+    commissionEmployeePtr->setBaseSalary(500);*/
 }

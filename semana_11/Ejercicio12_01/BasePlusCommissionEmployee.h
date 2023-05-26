@@ -11,8 +11,8 @@ public:
     void setBaseSalary(double);
     double getBaseSalary() const;
 
-    double earnings() const;
-    std::string toString() const;
+    virtual double earnings() const override;
+    virtual std::string toString() const override;
 private:
     double baseSalary;
 };
